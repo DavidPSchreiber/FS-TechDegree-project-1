@@ -1,0 +1,109 @@
+/** 
+ * Treehouse FSJS Techdegree
+ * Random Quote Generator - CSS
+ */
+
+ @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i&display=swap');
+ 
+ body {
+  /*text-align: center;*/
+  background-color: #0ea07b;
+  /* change background color above */
+
+  color: white;
+  font-family: 'Playfair Display', serif;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.2em;
+  margin-top: 1em;
+  
+}
+#quote-box {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  right: 10%;
+  width: 80%;
+  line-height: .5;
+}
+.quote {
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1.1;
+  position: relative;
+  margin: 12px;
+  }
+.quote:before, .quote:after {
+  font-size: 5rem;
+  line-height: 2rem !important;
+  position: absolute;
+}
+.quote:before {
+  content: "“";
+  top: .25em;
+  left: -.5em;
+}
+.quote:after {
+  content: "”";
+  bottom: -.1em;
+  margin-left: .1em;
+  position: absolute;
+}
+.source {
+  font-size: 1.25rem;;
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+  text-align: right;
+  margin-right: 4em;
+}
+.source:before {
+  content: "—";
+}
+.citation {
+  font-style: italic;
+}
+.citation:before {
+  content: ", ";
+  font-style: normal;
+}
+.year:before, .tags:before {
+  content: ", ";
+  font-style: normal;
+}
+
+#loadQuote {
+  position: fixed;
+  width: 12em;
+  /* font-size: 1em; */
+  display: inline-block;
+  left: 50%;
+  margin-left: -6em;
+  bottom: 145px;
+  border-radius: 4px;
+  color: #fff;
+  background-color: rgba(255,255,255,0);
+  border: 3px solid #fff;
+  padding: 14px 0;
+  transition: .4s ;
+}
+#loadQuote:hover {
+  background-color: rgba(255,255,255,.45);
+}
+#loadQuote:focus {
+  outline: none;
+}
+
+@media (max-width: 420px) {
+  .quote {
+    font-size: 2.5rem;
+  }
+  .quote:before, .quote:after {
+    font-size: 3rem;
+  }
+  .source {
+    font-size: 1rem;
+  }
+}
