@@ -20,8 +20,8 @@ const quotes = [
     },
     {
       quote: "Always go to other people's funerals, otherwise they won't come to yours.", 
-      source:  "J.F. Shaw Kennedy, (attributed to Yogi Berra*)",
-      citation: "The Youth of the Period",
+      source:  "Yogi Berra*",
+      citation: "Actual source:  J.F. Shaw Kennedy",
       year: "1876",
       tags: "*false attribution"
 
@@ -29,7 +29,7 @@ const quotes = [
     {
       quote:  "No one goes there nowadays, it's too crowded.", 
       source: "Yogi Berra",
-      citation: "Phil Rizzuto",
+      citation: "Phil Rizzuto interview",
       year: "1984",
       tags: ""
     },
@@ -88,7 +88,7 @@ var random;
 var choice;
 var string = "";
 var color = "";
-// quotes shouldn't be repeated until all have been called
+// quotes shouldn't repeat until all have been called
 // start by initializing array of used random numbers
 
 var usedRandomNumbers = [];
@@ -97,7 +97,7 @@ var counter = 0;
 
 
 
-// declare function to increase counter and reset once all quotes have been used
+// declare function to increase counter and reset once all quotes have been displayed
 function quotesUsed() {
   counter += 1;
   // if all quotes have been used once, reset array of used numbers
@@ -107,7 +107,7 @@ function quotesUsed() {
   }
 }
 
-// this code will randomly change the background color
+// create function to randomly change the background color
 // function creates random values
 function rgbRandom() {
   return Math.floor(Math.random() * 256);
@@ -120,7 +120,7 @@ function colorChange() {
 
 
 /* function to select a random quote object from array,
-  then test to see if quote already called,
+  and test to see if quote already called,
   then return quote object */
 function getRandomQuote() {
 
@@ -136,7 +136,7 @@ function getRandomQuote() {
           while (usedRandomNumbers.indexOf(random) > -1) {
             random = Math.floor(Math.random() * quotes.length);
           }
-          // then add it to used numbers and return random quote
+          // then add to used numbers and return random quote
           usedRandomNumbers.push(random);
           quotesUsed();
           return quotes[random];
@@ -173,6 +173,5 @@ function printQuote() {
 // when user clicks anywhere on the page, the printQuote function is called
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
-//call printQuote every 15 seconds
-window.setInterval(printQuote, 15000);
-  
+//call printQuote every 12 seconds
+window.setInterval(printQuote, 12000);

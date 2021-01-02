@@ -7,8 +7,8 @@
  
  body {
   /*text-align: center;*/
-  background-color: #0ea07b;
-  /* change background color above */
+  background-color: #36b55c;
+
 
   color: white;
   font-family: 'Playfair Display', serif;
@@ -18,7 +18,7 @@ h1 {
   text-align: center;
   font-weight: 400;
   font-size: 1.2em;
-  margin-top: 1em;
+  margin-top: 2em;
   
 }
 #quote-box {
@@ -57,7 +57,7 @@ h1 {
   letter-spacing: 0.05em;
   line-height: 1.1;
   text-align: right;
-  margin-right: 4em;
+  margin-right: 3em;
 }
 .source:before {
   content: "—";
@@ -96,14 +96,20 @@ h1 {
   outline: none;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 415px) {
   .quote {
-    font-size: 2.5rem;
+    font-size: 2.0rem;
   }
   .quote:before, .quote:after {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   .source {
     font-size: 1rem;
+  }
+  #loadQuote {
+    /* align: center; */
+    width: 10em;
+    bottom: 100px;
+    margin-left: -5em;
   }
 }
